@@ -77,7 +77,7 @@ html {
  position: absolute;
   left: calc(100vw/2 - 42px);
   top: min(calc(100vw/2 + 135px), 635px);
-  background-color: #000; /* Green */
+  background-color: #000;
   border: 2px solid #fff;
   color: white;
   padding: 10px 20px;
