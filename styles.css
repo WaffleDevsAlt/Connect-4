@@ -1,0 +1,105 @@
+:root {
+  --margin-size: 5px;
+}
+
+body {
+  margin-top: 70px;
+  width: calc(70vw + var(--margin-size) * 14);
+  height: calc(50vw + var(--margin-size) * 10);
+  border: solid 5px #fff;
+  position: center;
+  vertical-align: center;
+  background-color: black;
+  text-align: center;
+  max-width: 770px;
+  max-height: 550px;
+}
+
+div {
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  float: left;
+  width: calc(100vw/10);
+  height: calc(100vw/10);
+  margin: var(--margin-size);
+  border-radius: calc(100vw/10);
+}
+
+html {
+  margin: auto;
+  display: table;
+  background-color: black;
+}
+
+.redwon {
+  animation-name: redwon;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.bluewon {
+  animation-name: bluewon;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes redwon {
+  from { background-color: black; }
+  to { background-color: #c00; }
+}
+
+@keyframes bluewon {
+  from { background-color: black; }
+  to { background-color: #00c; }
+}
+
+#result {
+  color: white;
+  font-family: 'Times', serif;
+  padding: 0;
+  position: absolute;
+  left: calc(50vw - 60px);
+  top: 20px;
+  width: 120px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#reset{
+ position: absolute;
+  left: calc(100vw/2 - 42px);
+  top: min(calc(100vw/2 + 135px), 635px);
+  background-color: #000; /* Green */
+  border: 2px solid #fff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+#reset:hover {
+  position: absolute;
+  left: calc(100vw/2 - 42px);
+  top: min(calc(100vw/2 + 135px), 635px);
+  background-color: #fff; /* Green */
+  border: 2px solid #fff;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
