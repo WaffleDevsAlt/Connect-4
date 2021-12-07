@@ -100,20 +100,14 @@ function winLogic() {
     var c = board[winsets[i][2] - 1]
     var d = board[winsets[i][3] - 1]
     if (a == "1" && b == "1" && c == "1" && d == "1") {
-      gameEnd("R")
+      playing = false
       $("#result").html("Red Won!")
       $("html").addClass('redwon')
     } else if (a == "2" && b == "2" && c == "2" && d == "2") {
-      gameEnd("B")
+      playing = false
       $("#result").html("Blue Won!")
       $("html").addClass('bluewon')
     }
   }
 }
 
-function gameEnd(winner) {
-  playing = false
-}
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
