@@ -68,7 +68,6 @@ var winsets = [
 var turn = 1
 var board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var playing = true
-
 $(".dot").click(function() {
   if (!playing) return;
   if (board[this.id - 1] != "0") return;
