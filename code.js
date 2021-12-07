@@ -114,3 +114,6 @@ function winLogic() {
 function gameEnd(winner) {
   playing = false
 }
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
