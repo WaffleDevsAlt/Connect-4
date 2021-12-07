@@ -77,7 +77,7 @@ html {
  position: absolute;
   left: calc(100vw/2 - 42px);
   top: min(calc(100vw/2 + 135px), 635px);
-  background-color: #000;
+  background-color: #000; /* Green */
   border: 2px solid #fff;
   color: white;
   padding: 10px 20px;
@@ -85,7 +85,6 @@ html {
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
-  transition-duration: 0.4s;
   cursor: pointer;
 }
 #reset:hover {
