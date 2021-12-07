@@ -5,14 +5,14 @@
 body {
   margin-top: 70px;
   width: calc(70vw + var(--margin-size) * 14);
-  height: calc(50vw + var(--margin-size) * 10);
+  height: calc(60vw + var(--margin-size) * 12);
   border: solid 5px #fff;
   position: center;
   vertical-align: center;
   background-color: black;
   text-align: center;
   max-width: 770px;
-  max-height: 550px;
+  max-height: 660px;
 }
 
 div {
@@ -76,8 +76,8 @@ html {
 #reset{
  position: absolute;
   left: calc(100vw/2 - 42px);
-  top: min(calc(100vw/2 + 135px), 635px);
-  background-color: #000; /* Green */
+  top: min(calc(60vw + 155px), 755px);
+  background-color: #000;
   border: 2px solid #fff;
   color: white;
   padding: 10px 20px;
@@ -90,8 +90,8 @@ html {
 #reset:hover {
   position: absolute;
   left: calc(100vw/2 - 42px);
-  top: min(calc(100vw/2 + 135px), 635px);
-  background-color: #fff; /* Green */
+  top: min(calc(60vw + 155px), 755px);
+  background-color: #fff;
   border: 2px solid #fff;
   color: black;
   padding: 10px 20px;
