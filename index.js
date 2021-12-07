@@ -56,6 +56,7 @@ var playing = true
 
 $(".dot").click(function() {
   if (!playing) return;
+  
   if (board[this.id - 1] != "0") return;
   var ID;
   if (board[Number(this.id) + 27] == "0") {
