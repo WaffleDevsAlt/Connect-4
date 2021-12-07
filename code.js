@@ -49,17 +49,33 @@ var winsets = [
   [7, 13, 19, 25],
   [13, 19, 25, 31],
   [14, 20, 26, 32],
+  [15, 22, 29, 36],
+  [16, 23, 30, 37],
+  [17, 24, 31, 36],
+  [18, 25, 32, 37],
+  [19, 26, 33, 38],
+  [20, 27, 34, 39],
+  [21, 28, 35, 40],
+  [18, 26, 34, 42],
+  [17, 25, 33, 41],
+  [16, 24, 32, 40],
+  [15, 23, 31, 39],
+  [36, 37, 38, 39],
+  [37, 38, 39, 40],
+  [38, 39, 40, 41],
+  [39, 40, 41, 42],
 ]
 var turn = 1
-var board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+var board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var playing = true
 
 $(".dot").click(function() {
   if (!playing) return;
-  
   if (board[this.id - 1] != "0") return;
   var ID;
-  if (board[Number(this.id) + 27] == "0") {
+  if (board[Number(this.id) + 34] == "0") {
+    ID = Number(this.id) + 35;
+  } else if (board[Number(this.id) + 27] == "0") {
     ID = Number(this.id) + 28;
   } else if (board[Number(this.id) + 20] == "0") {
     ID = Number(this.id) + 21
@@ -93,6 +109,7 @@ $("#reset").click(function() {
   $("#result").html("Red's Turn")
   board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 })
+
 function winLogic() {
   for (var i = 0; i < winsets.length; i++) {
     var a = board[winsets[i][0] - 1]
@@ -110,4 +127,3 @@ function winLogic() {
     }
   }
 }
-
