@@ -68,6 +68,7 @@ var winsets = [
 var turn = 1
 var board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var playing = true
+
 $(".dot").click(function() {
   if (!playing) return;
   if (board[this.id - 1] != "0") return;
@@ -106,7 +107,7 @@ $("#reset").click(function() {
   turn = 1
   playing = true
   $("#result").html("Red's Turn")
-  board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 })
 
 function winLogic() {
@@ -126,9 +127,3 @@ function winLogic() {
     }
   }
 }
-
-$(document).ready(function() {
-  for (var i = 0; i <= 42; i++) {
-    $(`#${i}`).html(i)
-  }
-});
