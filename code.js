@@ -127,10 +127,18 @@ function winLogic() {
     if (a == "1" && b == "1" && c == "1" && d == "1") {
       playing = false
       $("#result").html("Red Won!")
+      $(`#${winsets[i][0]}`).css("background-color", "#400")
+      $(`#${winsets[i][1]}`).css("background-color", "#400")
+      $(`#${winsets[i][2]}`).css("background-color", "#400")
+      $(`#${winsets[i][3]}`).css("background-color", "#400")
       $("html").addClass('redwon')
     } else if (a == "2" && b == "2" && c == "2" && d == "2") {
       playing = false
       $("#result").html("Blue Won!")
+      $(`#${winsets[i][0]}`).css("background-color", "#004")
+      $(`#${winsets[i][1]}`).css("background-color", "#004")
+      $(`#${winsets[i][2]}`).css("background-color", "#004")
+      $(`#${winsets[i][3]}`).css("background-color", "#004")
       $("html").addClass('bluewon')
     }
   }
