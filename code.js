@@ -103,7 +103,7 @@ $(".dot").click(function() {
   } else {
     turn = 1;
     $("#result").html("Red's Turn")
-    $(`#${ID}`).css("background-color", "red")
+    $(`#${ID}`).css("background-color", "blue")
   }
   winLogic()
 })
