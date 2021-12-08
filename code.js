@@ -81,7 +81,7 @@ $(".dot").click(function() {
   if (!playing) return;
   if (board[this.id - 1] != "0") return;
   var ID;
-/*    if (board[Number(this.id) + 34] == "0") {
+    if (board[Number(this.id) + 34] == "0") {
     ID = Number(this.id) + 35;
      } else if (board[Number(this.id) + 27] == "0") {
     ID = Number(this.id) + 28;
@@ -91,14 +91,14 @@ $(".dot").click(function() {
     ID = Number(this.id) + 14
      } else if (board[Number(this.id) + 6] == "0") {
     ID = Number(this.id) + 7
-     } else {  */
+     } else {  
     ID = this.id
- // }
+	}
 
   board[ID - 1] = turn
   if (turn == 1) {
     $(`#${ID}`).css("background-color", "red")
-    turn = 1
+    turn = 2
     $("#result").html("Blue's Turn")
   } else {
     turn = 1;
