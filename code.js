@@ -135,9 +135,3 @@ function winLogic() {
     }
   }
 }
-
-$(document).ready(function() {
-  for (var i = 0; i <= 42; i++) {
-    $(`#${i}`).html(i)
-  }
-});
