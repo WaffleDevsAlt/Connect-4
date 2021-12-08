@@ -51,11 +51,11 @@ var winsets = [
   [14, 20, 26, 32],
   [15, 22, 29, 36],
   [16, 23, 30, 37],
-  [17, 24, 31, 36],
-  [18, 25, 32, 37],
-  [19, 26, 33, 38],
-  [20, 27, 34, 39],
-  [21, 28, 35, 40],
+  [17, 24, 31, 38],
+  [18, 25, 32, 39],
+  [19, 26, 33, 40],
+  [20, 27, 34, 41],
+  [21, 28, 35, 42],
   [18, 26, 34, 42],
   [17, 25, 33, 41],
   [16, 24, 32, 40],
@@ -81,29 +81,29 @@ $(".dot").click(function() {
   if (!playing) return;
   if (board[this.id - 1] != "0") return;
   var ID;
-   if (board[Number(this.id) + 34] == "0") {
+/*    if (board[Number(this.id) + 34] == "0") {
     ID = Number(this.id) + 35;
-  } else if (board[Number(this.id) + 27] == "0") {
+     } else if (board[Number(this.id) + 27] == "0") {
     ID = Number(this.id) + 28;
-  } else if (board[Number(this.id) + 20] == "0") {
+     } else if (board[Number(this.id) + 20] == "0") {
     ID = Number(this.id) + 21
-  } else if (board[Number(this.id) + 13] == "0") {
+     } else if (board[Number(this.id) + 13] == "0") {
     ID = Number(this.id) + 14
-  } else if (board[Number(this.id) + 6] == "0") {
+     } else if (board[Number(this.id) + 6] == "0") {
     ID = Number(this.id) + 7
-  } else { 
+     } else {  */
     ID = this.id
-  }
+ // }
 
   board[ID - 1] = turn
   if (turn == 1) {
     $(`#${ID}`).css("background-color", "red")
-    turn = 2
+    turn = 1
     $("#result").html("Blue's Turn")
   } else {
     turn = 1;
     $("#result").html("Red's Turn")
-    $(`#${ID}`).css("background-color", "blue")
+    $(`#${ID}`).css("background-color", "red")
   }
   winLogic()
 })
