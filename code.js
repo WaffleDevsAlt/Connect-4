@@ -93,7 +93,7 @@ $(".dot").click(function() {
     ID = Number(this.id) + 7
      } else {  
     ID = this.id
-	}
+  }
 
   board[ID - 1] = turn
   if (turn == 1) {
