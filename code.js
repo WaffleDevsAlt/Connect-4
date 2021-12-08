@@ -82,17 +82,17 @@ $(".dot").click(function() {
   if (board[this.id - 1] != "0") return;
   var ID;
     if (board[Number(this.id) + 34] == "0") {
-    ID = Number(this.id) + 35;
+        ID = Number(this.id) + 35;
      } else if (board[Number(this.id) + 27] == "0") {
-    ID = Number(this.id) + 28;
+        ID = Number(this.id) + 28;
      } else if (board[Number(this.id) + 20] == "0") {
-    ID = Number(this.id) + 21
+        ID = Number(this.id) + 21
      } else if (board[Number(this.id) + 13] == "0") {
-    ID = Number(this.id) + 14
+        ID = Number(this.id) + 14
      } else if (board[Number(this.id) + 6] == "0") {
-    ID = Number(this.id) + 7
+        ID = Number(this.id) + 7
      } else {  
-    ID = this.id
+        ID = this.id
   }
 
   board[ID - 1] = turn
