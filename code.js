@@ -64,6 +64,14 @@ var winsets = [
   [37, 38, 39, 40],
   [38, 39, 40, 41],
   [39, 40, 41, 42],
+  [18,24,30,36],
+  [19,25,31,37],
+  [20,26,32,38],
+  [21,27,33,39],
+  [15,23,31,39],
+  [16,24,32,40],
+  [17,25,33,41],
+  [18,26,34,42],
 ]
 var turn = 1
 var board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -73,7 +81,7 @@ $(".dot").click(function() {
   if (!playing) return;
   if (board[this.id - 1] != "0") return;
   var ID;
-  if (board[Number(this.id) + 34] == "0") {
+   if (board[Number(this.id) + 34] == "0") {
     ID = Number(this.id) + 35;
   } else if (board[Number(this.id) + 27] == "0") {
     ID = Number(this.id) + 28;
@@ -83,7 +91,7 @@ $(".dot").click(function() {
     ID = Number(this.id) + 14
   } else if (board[Number(this.id) + 6] == "0") {
     ID = Number(this.id) + 7
-  } else {
+  } else { 
     ID = this.id
   }
 
@@ -127,3 +135,9 @@ function winLogic() {
     }
   }
 }
+
+$(document).ready(function() {
+  for (var i = 0; i <= 42; i++) {
+    $(`#${i}`).html(i)
+  }
+});
